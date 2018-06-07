@@ -12,6 +12,9 @@
 */
 
 Route::get('/completed', "PokemonController@saveApiData");
-Route::get('/', function(){
-  return view('welcome');
-});
+Route::get('/profile', "ProfileController@getProfiles");
+Route::post('/getRequest', "ProfileController@pokemonKing");
+Route::get('/', "ProfileController@profileTable");
+// Route::get('/', function(){
+//   return view('welcome');
+// });
